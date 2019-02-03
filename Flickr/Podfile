@@ -1,0 +1,6 @@
+platform :ios, '11.0'
+target 'Flickr' do
+  use_frameworks!
+  pod 'Alamofire', '~> 5.0.0.beta.1'
+  pod 'DeepDiff'
+end

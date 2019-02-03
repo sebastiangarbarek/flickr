@@ -1,12 +1,15 @@
 # Flickr App
 
-An app written in a day using [Flickr's APIs](https://www.flickr.com/services/api/) to browse and search recent images.
+An app written in a day as part of a coding challenge using [Flickr's APIs](https://www.flickr.com/services/api/) to browse and search recent images.
+
+![](demo.gif)
 
 ## Features
 
-- A feed with the latest public photos posted to Flickr
+- View recent photos uploaded to Flicker
 - Search the latest public photos posted to Flickr
-- View images in large resolution
+- View total search result count
+- View large resolution images
 - Optimised image loading
 - Image caching
 - Animations
@@ -20,9 +23,11 @@ There are 3 screens in the app, the home screen, the photo screen and the search
 
 ## Approach
 
-I used Alamofire for the requests as it made parsing the JSON responses simpler, for a bigger project I would have used my own wrapper that integrates with a Core Data model to give me more power implementing features.
+I used Alamofire for the requests as it made parsing the JSON responses simpler, for a bigger project I would have used my own wrapper that integrates with Core Data to give more power implementing features.
 
+```
 JSON → Core Data object → NSFetchedResultsController
+```
 
 A deep diff framework is useful when it comes to updates, I included DeepDiff in this project with plans to implement pagination and pull to refresh but it was not needed.
 
